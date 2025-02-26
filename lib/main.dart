@@ -25,10 +25,10 @@ class MyApp extends StatelessWidget {
             borderSide: BorderSide(color: Colors.blue, width: 1),
           ),
         ),
+        // visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: HomeScreen(),
       debugShowCheckedModeBanner: false,
     );
   }
 }
-

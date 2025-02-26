@@ -138,7 +138,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           positionFactor: 0.5)
                     ])
                   ]),
-                )
+                ),
 
                 // Container(
                 //   padding: EdgeInsets.all(15),

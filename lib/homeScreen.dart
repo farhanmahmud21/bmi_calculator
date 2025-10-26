@@ -28,6 +28,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return 0;
   }
 
+  @override
   void dispose() {
     ageController.clear();
     heightController.clear();
@@ -97,48 +98,46 @@ class _HomeScreenState extends State<HomeScreen> {
                       style: TextStyle(color: Colors.white)),
                 ),
                 SizedBox(height: 20),
-                Container(
-                  child: SfRadialGauge(axes: <RadialAxis>[
-                    RadialAxis(minimum: 0, maximum: 40, ranges: <GaugeRange>[
-                      GaugeRange(
-                        startValue: 0,
-                        endValue: 18.4,
-                        color: Colors.lightBlue,
-                        label: 'UnderWeight',
-                      ),
-                      GaugeRange(
-                        startValue: 18.5,
-                        endValue: 25,
-                        color: Colors.green,
-                        label: 'Normal',
-                      ),
-                      GaugeRange(
-                        startValue: 25,
-                        endValue: 30,
-                        color: Colors.red,
-                        label: 'Over-Weight',
-                        labelStyle: GaugeTextStyle(color: Colors.black),
-                      ),
-                      GaugeRange(
-                        startValue: 30,
-                        endValue: 40,
-                        color: Colors.orange,
-                        label: 'Obese',
-                      )
-                    ], pointers: <GaugePointer>[
-                      NeedlePointer(value: bmiResult)
-                    ], annotations: <GaugeAnnotation>[
-                      GaugeAnnotation(
-                          widget: Container(
-                              child: Text(bmiResult.toStringAsFixed(2),
-                                  style: TextStyle(
-                                      fontSize: 25,
-                                      fontWeight: FontWeight.bold))),
-                          angle: 90,
-                          positionFactor: 0.5)
-                    ])
-                  ]),
-                ),
+                SfRadialGauge(axes: <RadialAxis>[
+                  RadialAxis(minimum: 0, maximum: 40, ranges: <GaugeRange>[
+                    GaugeRange(
+                      startValue: 0,
+                      endValue: 18.4,
+                      color: Colors.lightBlue,
+                      label: 'UnderWeight',
+                    ),
+                    GaugeRange(
+                      startValue: 18.5,
+                      endValue: 25,
+                      color: Colors.green,
+                      label: 'Normal',
+                    ),
+                    GaugeRange(
+                      startValue: 25,
+                      endValue: 30,
+                      color: Colors.red,
+                      label: 'Over-Weight',
+                      labelStyle: GaugeTextStyle(color: Colors.black),
+                    ),
+                    GaugeRange(
+                      startValue: 30,
+                      endValue: 40,
+                      color: Colors.orange,
+                      label: 'Obese',
+                    )
+                  ], pointers: <GaugePointer>[
+                    NeedlePointer(value: bmiResult)
+                  ], annotations: <GaugeAnnotation>[
+                    GaugeAnnotation(
+                        widget: Container(
+                            child: Text(bmiResult.toStringAsFixed(2),
+                                style: TextStyle(
+                                    fontSize: 25,
+                                    fontWeight: FontWeight.bold))),
+                        angle: 90,
+                        positionFactor: 0.5)
+                  ])
+                ]),
 
                 // Container(
                 //   padding: EdgeInsets.all(15),

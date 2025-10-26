@@ -7,12 +7,12 @@ class CustomInputField extends StatelessWidget {
   final String? suffixText;
 
   const CustomInputField({
-    Key? key,
+    super.key,
     required this.controller,
     required this.hintText,
     required this.prefixIcon,
     this.suffixText,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
